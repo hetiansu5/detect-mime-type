@@ -1,3 +1,5 @@
+[![Test Coverage](https://codecov.io/gh/hetiansu5/detect-mime-type/branch/master/graph/badge.svg)](https://codecov.io/gh/hetiansu5/detect-mime-type)
+
 ## Introduction
 Detect mime type for files.
 
