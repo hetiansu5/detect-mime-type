@@ -94,46 +94,46 @@ class MimeType
     public static function getMimeTypes()
     {
         return [
+            self::PDF,
             self::WORD,
             self::EXCEL,
-            self::PPT,
-            self::RTF,
-            self::PDF,
-            self::MSDOC,
-            self::XML,
-            self::TXT_UTF8,
-            self::TXT_UTF16_BE,
-            self::TXT_UTF16_LE,
-            self::TXT_UTF32_BE,
-            self::TXT_UTF32_LE,
             self::JPEG,
-            self::PNG,
-            self::GIF,
-            self::BMP,
-            self::ICO,
-            self::GZ_TGZ,
-            self::ZIP_7Z,
-            self::ZIP_7Z_2,
             self::ZIP,
             self::RAR,
+            self::PNG,
+            self::RTF,
+            self::PPT,
+            self::GIF,
             self::DLL_EXE,
-            self::TAR_ZV,
-            self::TAR_ZH,
+            self::MSDOC,
+            self::BMP,
             self::BZ2,
+            self::ZIP_7Z,
+            self::ZIP_7Z_2,
+            self::GZ_TGZ,
+            self::TAR_ZH,
+            self::TAR_ZV,
             self::OGG,
+            self::ICO,
+            self::XML,
             self::MIDI,
             self::FLV,
             self::WAVE,
-            self::PST,
             self::DWG,
-            self::PSD,
             self::LIB_COFF,
+            self::PST,
+            self::PSD,
             self::AES,
             self::SKR,
             self::SKR_2,
             self::PKR,
             self::EML_FROM,
             self::ELF,
+            self::TXT_UTF8,
+            self::TXT_UTF16_BE,
+            self::TXT_UTF16_LE,
+            self::TXT_UTF32_BE,
+            self::TXT_UTF32_LE,
         ];
     }
 
@@ -149,11 +149,15 @@ class MimeType
 
     private static function getConfig()
     {
-        if (!empty(self::$config)) {
-            return self::$config;
+        if (empty(self::$config)) {
+            self::$config = self::initConfig();
         }
+        return self::$config;
+    }
 
-        return self::$config = [
+    private static function initConfig()
+    {
+        return [
             self::WORD => new FileType([0xEC, 0xA5, 0xC1, 0x00], 512, 'doc', 'application/msword'),
             self::EXCEL => new FileType([0x09, 0x08, 0x10, 0x00, 0x00, 0x06, 0x05, 0x00], 512, "xls", "application/excel"),
             self::PPT => new FileType([0xFD, 0xFF, 0xFF, 0xFF, null, 0x00, 0x00, 0x00], 512, "ppt", "application/mspowerpoint"),
