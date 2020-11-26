@@ -15,3 +15,7 @@ Based on [https://github.com/Muraad/Mime-Detective](https://github.com/Muraad/Mi
         echo $e->getMessage();       
     }
 ```
+
+
+## How to Implement Detecting
+Each type of file have its unique scheme protocol, found them and compare.
