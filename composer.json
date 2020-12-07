@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test" : [
-      "vendor/bin/phpunit --configuration phpunit.xml --colors  tests"
+      "vendor/bin/phpunit --configuration phpunit.xml.dist --colors  tests"
     ],
     "cover": [
         "vendor/bin/phpunit --coverage-clover coverage.xml"
