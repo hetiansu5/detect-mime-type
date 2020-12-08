@@ -20,3 +20,14 @@ Based on [https://github.com/Muraad/Mime-Detective](https://github.com/Muraad/Mi
 
 ## How to Implement Detecting
 Each type of file have its unique scheme protocol, found them and compare.
+
+## Other
+
+- Check Code Style
+[https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+
+- Check Syntax 
+[https://github.com/php-parallel-lint/PHP-Parallel-Lint](https://github.com/php-parallel-lint/PHP-Parallel-Lint)
+
+- Code Checker
+[https://github.com/phpmd/phpmd](https://github.com/phpmd/phpmd)
