@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 println BranchString
-                git branch: branch.split('/')[1], credentialsId: 'hts', url: 'git@gitee.com:tinson_ho/detect-mime-type.git'
+                git branch: branch.split('/')[1], credentialsId: 'tinson', url: 'git@gitee.com:tinson_ho/detect-mime-type.git'
             }
         }
         stage('Prepare')  {
